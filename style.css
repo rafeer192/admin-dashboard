@@ -1,3 +1,5 @@
+/* CSS reset reset.css by Josh */
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -23,14 +25,23 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* style.css */
+
+:root {
+  --light-background: #fafafa; 
+  --main-background-dark: #cbd5e1; 
+  --sidebar-blue: #60a5fa;
+}
+
 body {
   display: grid; 
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 5fr;
+  background-color: var(--main-background-dark);
 }
 
 header {
-  background-color: aliceblue;
+  background-color: var(--light-background);
   grid-column: 2 / -1;
   padding: 20px 40px;
   display: grid;
@@ -42,7 +53,7 @@ header {
 
 header input {
   width: 80%;
-  background-color: #d1d5db;
+  background-color: var(--main-background-dark);
   border: none;
   border-radius: 16px;
   padding: 4px 8px;
@@ -50,7 +61,7 @@ header input {
 
 .search-section {
   display: flex; 
-  gap: 20px;
+  gap: 14px;
 }
 
 .profile-section {
@@ -63,4 +74,43 @@ header input {
 .profile-section p {
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+.greeting-section {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.greeting {
+  line-height: 1.2;
+}
+
+.greeting p:first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.greeting p:last-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.action-buttons button {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 33%;
+  background-color: var(--sidebar-blue);
+  border: none;
+  border-radius: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
 }

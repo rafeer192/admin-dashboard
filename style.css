@@ -51,7 +51,7 @@ header {
   grid-template-rows: 1fr 1.5fr;
   row-gap: 20px;
   align-items: center;
-  box-shadow: 0 6px 4px rgb(200, 200, 200);
+  box-shadow: 0 8px 8px rgb(174, 174, 174);
 }
 
 header input {
@@ -118,6 +118,10 @@ header input {
   cursor: pointer;
 }
 
+.action-buttons button:hover {
+  background-color: #569df4;
+}
+
 .sidebar {
   color: var(--light-background);
   background-color: var(--sidebar-blue);
@@ -133,6 +137,10 @@ header input {
   margin-bottom: 7vh;
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+.sidebar a:hover {
+  color: rgb(232, 232, 232);
 }
 
 .sidebar nav ul {
@@ -166,14 +174,39 @@ nav ul li:nth-child(6) {
 .projects-main {
   grid-column: 2 / 3;
   grid-row: 2 / -1; 
+  padding: 32px 16px;
+}
+
+.projects-main h3 {
+  margin-bottom: 8px;
 }
 
 .project-cards-wrapper {
   display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 20px 15px;
 }
 
 .project-card {
-  border: 1px solid black;
+  border-left: 4px solid gold;
+  padding: 32px 16px 60px;
+  background-color: var(--light-background);
+  border-radius: 12px;
+  box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: rgb(107, 107, 107)
+}
+
+.project-card .icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem; 
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
 }

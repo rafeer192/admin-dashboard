@@ -33,11 +33,13 @@ p, h1, h2, h3, h4, h5, h6 {
   --sidebar-blue: #60a5fa;
   --medium-header-font-size: 1.5rem;
   --small-header-font-size: 1.3rem;
+  --main-padding-top: 32px;
+  --light-font-color: rgb(107, 107, 107);
 }
 
 body {
   display: grid; 
-  grid-template-columns: 1fr 3fr 1.2fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 5fr;
   background-color: var(--main-background-dark);
 }
@@ -174,10 +176,11 @@ nav ul li:nth-child(6) {
 .projects-main {
   grid-column: 2 / 3;
   grid-row: 2 / -1; 
-  padding: 32px 16px;
+  padding: var(--main-padding-top) 16px;
 }
 
-.projects-main h3 {
+.projects-main h3, 
+.right-side-info h3 {
   margin-bottom: 8px;
 }
 
@@ -190,7 +193,7 @@ nav ul li:nth-child(6) {
 
 .project-card {
   border-left: 4px solid gold;
-  padding: 32px 16px 60px;
+  padding: var(--main-padding-top) 16px 60px;
   background-color: var(--light-background);
   border-radius: 12px;
   box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.5);
@@ -199,7 +202,7 @@ nav ul li:nth-child(6) {
 
 .project-card p {
   font-size: 0.9rem;
-  color: rgb(107, 107, 107)
+  color: var(--light-font-color); 
 }
 
 .project-card .icons-wrapper {
@@ -209,4 +212,29 @@ nav ul li:nth-child(6) {
   position: absolute;
   right: 24px;
   bottom: 24px;
+}
+
+.right-side-info {
+  padding-top: var(--main-padding-top); 
+  grid-column: 3 / -1; 
+  grid-row: 2 / -1;
+}
+
+.announcements-wrapper {
+  background-color: var(--light-background);
+  border-radius: 12px;
+  padding: var(--main-padding-top) 16px;
+  display: grid; 
+  grid-template-rows: repeat(auto-fit, 1fr);
+  row-gap: 16px;
+  margin-right: 16px;
+}
+
+.announce-card p {
+  font-size: 0.8rem;
+  color: var(--light-font-color);
+}
+
+.line {
+  border-bottom: 1px solid #888;
 }

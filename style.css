@@ -218,9 +218,13 @@ nav ul li:nth-child(6) {
   padding-top: var(--main-padding-top); 
   grid-column: 3 / -1; 
   grid-row: 2 / -1;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: var(--main-padding-top);
 }
 
-.announcements-wrapper {
+.announce-cards-wrapper, 
+.trending-cards-wrapper {
   background-color: var(--light-background);
   border-radius: 12px;
   padding: var(--main-padding-top) 16px;
@@ -228,6 +232,7 @@ nav ul li:nth-child(6) {
   grid-template-rows: repeat(auto-fit, 1fr);
   row-gap: 16px;
   margin-right: 16px;
+  box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.3);
 }
 
 .announce-card p {
@@ -238,3 +243,4 @@ nav ul li:nth-child(6) {
 .line {
   border-bottom: 1px solid #888;
 }
+

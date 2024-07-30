@@ -235,6 +235,10 @@ nav ul li:nth-child(6) {
   box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.3);
 }
 
+.trending-cards-wrapper {
+  padding: 16px;
+}
+
 .announce-card p {
   font-size: 0.8rem;
   color: var(--light-font-color);
@@ -244,3 +248,20 @@ nav ul li:nth-child(6) {
   border-bottom: 1px solid #888;
 }
 
+.trending-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trending-card .user-account p {
+  font-size: 0.8rem;
+}
+
+.user-account {
+  line-height: 1.2;
+}
+
+.trending-card .user-account p:last-child {
+  color: var(--light-font-color);
+}
